@@ -1,0 +1,2 @@
+[console_scripts]
+ultragravity = ultragravity.cli:main

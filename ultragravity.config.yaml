@@ -1,0 +1,67 @@
+app:
+  log_level: INFO
+  model_name: gemini-2.5-flash
+  headless: false
+
+security:
+  require_env_file: true
+  fail_if_no_provider_key: true
+
+diagnostics:
+  enabled: true
+  warn_on_default_secrets: true
+
+provider:
+  profile: free_tier_ultra_safe
+  gemini:
+    rpm_limit: 10
+    tpm_limit: 12000
+    daily_request_limit: 500
+    soft_cap_ratio: 0.6
+  mistral:
+    rpm_limit: 8
+    tpm_limit: 10000
+    daily_request_limit: 400
+    soft_cap_ratio: 0.6
+  scheduler:
+    max_retries: 3
+    base_backoff_seconds: 2.0
+    max_backoff_seconds: 20.0
+    jitter_seconds: 0.4
+
+call_reduction:
+  enabled: true
+  state_change_threshold: 5
+  enable_deterministic_router: true
+  vision_cache:
+    ttl_seconds: 300
+    max_entries: 1000
+  summary_cache:
+    ttl_seconds: 3600
+    max_entries: 300
+  tool_cache:
+    ttl_seconds: 300
+    max_entries: 500
+
+prompt_optimization:
+  enabled: true
+  debug_reasoning: false
+  max_output_tokens_action: 220
+  max_output_tokens_summary_chunk: 220
+  max_output_tokens_summary_merge: 420
+  summary_chunk_chars: 3500
+  summary_overlap_chars: 250
+  summary_top_k_chunks: 6
+
+planner:
+  enabled: true
+  max_iterations: 20
+  retry_attempts: 2
+  retry_backoff_seconds: 1.0
+
+memory:
+  enabled: true
+  backend: sqlite
+  sqlite_path: data/ultragravity_memory.db
+  max_events: 5000
+  retrieval_top_k: 5

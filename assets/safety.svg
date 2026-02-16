@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d2b"/><stop offset="100%" stop-color="#1a0a3e"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="200" rx="16" fill="url(#bg)"/>
+
+  <text x="450" y="28" text-anchor="middle" font-family="'SF Mono', monospace" font-size="12" fill="#fb7185" letter-spacing="3" opacity="0.8">SAFETY &amp; POLICY</text>
+
+  <!-- R0 -->
+  <g transform="translate(130, 110)">
+    <rect x="-80" y="-45" width="160" height="90" rx="10" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-width="1.2"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="14" fill="#34d399" font-weight="700">R0</text>
+    <text x="0" y="2" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#6ee7b7" font-weight="600">Read-Only</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#94a3b8">Screenshots, analysis</text>
+    <text x="0" y="30" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#6ee7b7" opacity="0.7">✓ Auto-approved</text>
+    <circle cx="80" cy="-45" r="4" fill="#10b981">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- R1 -->
+  <g transform="translate(335, 110)">
+    <rect x="-80" y="-45" width="160" height="90" rx="10" fill="#06b6d4" fill-opacity="0.08" stroke="#06b6d4" stroke-width="1.2"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="14" fill="#67e8f9" font-weight="700">R1</text>
+    <text x="0" y="2" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#a5f3fc" font-weight="600">UI Interaction</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#94a3b8">Clicks, typing, scrolling</text>
+    <text x="0" y="30" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#a5f3fc" opacity="0.7">⚡ Dev auto · Strict ask</text>
+    <circle cx="80" cy="-45" r="4" fill="#06b6d4">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+
+  <!-- R2 -->
+  <g transform="translate(565, 110)">
+    <rect x="-80" y="-45" width="160" height="90" rx="10" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="14" fill="#fbbf24" font-weight="700">R2</text>
+    <text x="0" y="2" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#fde68a" font-weight="600">Data Mutation</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#94a3b8">Send messages, write files</text>
+    <text x="0" y="30" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#fde68a" opacity="0.7">⚠️ Prompt required</text>
+    <circle cx="80" cy="-45" r="4" fill="#f59e0b">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+  </g>
+
+  <!-- R3 -->
+  <g transform="translate(770, 110)">
+    <rect x="-80" y="-45" width="160" height="90" rx="10" fill="#f43f5e" fill-opacity="0.08" stroke="#f43f5e" stroke-width="1.2"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="14" fill="#fb7185" font-weight="700">R3</text>
+    <text x="0" y="2" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#fda4af" font-weight="600">System Access</text>
+    <text x="0" y="18" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#94a3b8">Shell commands, OS control</text>
+    <text x="0" y="30" text-anchor="middle" font-family="'SF Mono', monospace" font-size="8" fill="#fda4af" opacity="0.7">🛡 Always ask</text>
+    <circle cx="80" cy="-45" r="4" fill="#f43f5e">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+    </circle>
+  </g>
+
+  <!-- Connecting line -->
+  <line x1="210" y1="110" x2="255" y2="110" stroke="#94a3b8" stroke-width="1" opacity="0.3" stroke-dasharray="4 3"/>
+  <line x1="415" y1="110" x2="485" y2="110" stroke="#94a3b8" stroke-width="1" opacity="0.3" stroke-dasharray="4 3"/>
+  <line x1="645" y1="110" x2="690" y2="110" stroke="#94a3b8" stroke-width="1" opacity="0.3" stroke-dasharray="4 3"/>
+
+  <!-- Shield icon animated -->
+  <g transform="translate(450, 185)">
+    <text x="0" y="0" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#94a3b8" opacity="0.5">Policy Engine → Permission Broker → Audit Logger</text>
+  </g>
+</svg>

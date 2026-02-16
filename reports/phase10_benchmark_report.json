@@ -1,0 +1,18 @@
+{
+  "scheduler": {
+    "total_requests": 300,
+    "successful_requests": 300,
+    "failed_requests": 0,
+    "hard_failures": 0,
+    "retries_triggered": 24,
+    "success_rate": 1.0,
+    "avg_latency_ms": 0.3067818027921021
+  },
+  "gateway": {
+    "total_actions": 180,
+    "allowed": 162,
+    "denied": 18,
+    "executed": 162
+  },
+  "generated_at": "2026-02-16T05:32:20.835092+00:00"
+}

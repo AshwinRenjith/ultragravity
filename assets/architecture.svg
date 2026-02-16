@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d2b"/>
+      <stop offset="100%" stop-color="#1a0a3e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/><stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+    <linearGradient id="flowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#7c3aed" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="400" rx="16" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-family="'SF Mono', monospace" font-size="13" fill="#a78bfa" letter-spacing="3" opacity="0.8">ARCHITECTURE</text>
+
+  <!-- ═══ USER INPUT (top) ═══ -->
+  <g transform="translate(450, 72)">
+    <rect x="-95" y="-18" width="190" height="36" rx="18" fill="none" stroke="url(#purple)" stroke-width="2"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="13" fill="#c4b5fd" font-weight="600">💬 Natural Language</text>
+    <circle cx="-95" cy="0" r="3" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="95" cy="0" r="3" fill="#a78bfa">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+  </g>
+
+  <!-- Arrow down -->
+  <line x1="450" y1="92" x2="450" y2="118" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- ═══ CLI ROUTER ═══ -->
+  <g transform="translate(450, 140)">
+    <rect x="-80" y="-18" width="160" height="36" rx="8" fill="#7c3aed" fill-opacity="0.15" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="0" y="5" text-anchor="middle" font-family="'SF Mono', monospace" font-size="12" fill="#c4b5fd" font-weight="600">⚡ CLI Router</text>
+  </g>
+
+  <!-- Branching arrows -->
+  <!-- Left: Quick Path -->
+  <path d="M370,152 L200,185" fill="none" stroke="#10b981" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+  <!-- Right: Full Agent -->
+  <path d="M530,152 L700,185" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ═══ QUICK PATH (left) ═══ -->
+  <g transform="translate(160, 210)">
+    <rect x="-100" y="-22" width="200" height="44" rx="10" fill="#10b981" fill-opacity="0.1" stroke="url(#green)" stroke-width="1.5"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="12" fill="#34d399" font-weight="700">⚡ Quick Path</text>
+    <text x="0" y="13" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#6ee7b7" opacity="0.7">WhatsApp · Notes · Direct</text>
+  </g>
+
+  <!-- Quick path sub-items -->
+  <g transform="translate(95, 268)">
+    <rect x="-45" y="-12" width="90" height="24" rx="6" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-width="1" opacity="0.7"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#6ee7b7">AppleScript</text>
+  </g>
+  <g transform="translate(225, 268)">
+    <rect x="-52" y="-12" width="104" height="24" rx="6" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-width="1" opacity="0.7"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#6ee7b7">🤖 LLM Compose</text>
+  </g>
+  <line x1="120" y1="234" x2="95" y2="254" stroke="#10b981" stroke-width="1" opacity="0.4"/>
+  <line x1="195" y1="234" x2="225" y2="254" stroke="#10b981" stroke-width="1" opacity="0.4"/>
+
+  <!-- ═══ FULL AGENT (right) ═══ -->
+  <g transform="translate(700, 210)">
+    <rect x="-120" y="-22" width="240" height="44" rx="10" fill="#06b6d4" fill-opacity="0.1" stroke="url(#cyan)" stroke-width="1.5"/>
+    <text x="0" y="-3" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="12" fill="#67e8f9" font-weight="700">🧠 UltragravityAgent</text>
+    <text x="0" y="13" text-anchor="middle" font-family="'SF Mono', monospace" font-size="9" fill="#a5f3fc" opacity="0.7">Plan → Execute → Observe → Repeat</text>
+  </g>
+
+  <!-- Agent internal boxes -->
+  <!-- Vision -->
+  <g transform="translate(615, 280)">
+    <rect x="-50" y="-14" width="100" height="28" rx="6" fill="#f59e0b" fill-opacity="0.1" stroke="url(#amber)" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#fbbf24">👁 Vision AI</text>
+  </g>
+  <!-- Skills -->
+  <g transform="translate(740, 280)">
+    <rect x="-45" y="-14" width="90" height="28" rx="6" fill="#a78bfa" fill-opacity="0.1" stroke="url(#purple)" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#c4b5fd">🎯 Skills</text>
+  </g>
+  <!-- Gateway -->
+  <g transform="translate(850, 280)">
+    <rect x="-42" y="-14" width="84" height="28" rx="6" fill="#f43f5e" fill-opacity="0.1" stroke="url(#rose)" stroke-width="1"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#fb7185">🛡 Gateway</text>
+  </g>
+  <line x1="660" y1="234" x2="615" y2="264" stroke="#f59e0b" stroke-width="1" opacity="0.4"/>
+  <line x1="700" y1="234" x2="740" y2="264" stroke="#a78bfa" stroke-width="1" opacity="0.4"/>
+  <line x1="750" y1="234" x2="850" y2="264" stroke="#f43f5e" stroke-width="1" opacity="0.4"/>
+
+  <!-- ═══ BOTTOM: Execution Targets ═══ -->
+  <!-- Browser -->
+  <g transform="translate(615, 345)">
+    <rect x="-58" y="-16" width="116" height="32" rx="8" fill="#06b6d4" fill-opacity="0.08" stroke="#06b6d4" stroke-width="1.2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#67e8f9">🌐 Browser</text>
+  </g>
+  <!-- Desktop -->
+  <g transform="translate(770, 345)">
+    <rect x="-58" y="-16" width="116" height="32" rx="8" fill="#a78bfa" fill-opacity="0.08" stroke="#a78bfa" stroke-width="1.2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#c4b5fd">🖥 Desktop</text>
+  </g>
+
+  <line x1="615" y1="298" x2="615" y2="327" stroke="#06b6d4" stroke-width="1" opacity="0.4" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="770" y1="298" x2="770" y2="327" stroke="#a78bfa" stroke-width="1" opacity="0.4" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- ═══ Quick Path output ═══ -->
+  <g transform="translate(160, 330)">
+    <rect x="-75" y="-16" width="150" height="32" rx="8" fill="#10b981" fill-opacity="0.08" stroke="#10b981" stroke-width="1.2"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="11" fill="#34d399">✅ Instant Action</text>
+  </g>
+  <line x1="160" y1="294" x2="160" y2="312" stroke="#10b981" stroke-width="1" opacity="0.4" stroke-dasharray="3 2">
+    <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Pulse effect on agent -->
+  <circle cx="700" cy="210" r="120" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0">
+    <animate attributeName="r" values="60;120" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,19 @@
+# Reproducibility baseline for local development.
+# Install using:
+#   pip install -r requirements.txt -c constraints.txt
+#   pip install -r requirements-dev.txt -c constraints.txt
+
+playwright==1.50.0
+playwright-stealth==1.0.6
+google-generativeai==0.8.3
+mistralai==1.5.2
+python-dotenv==1.0.1
+pydantic==2.10.6
+PyYAML==6.0.2
+numpy==2.2.3
+Pillow==11.1.0
+pyautogui==0.9.54
+mss==10.0.0
+pynput==1.8.1
+termcolor==2.5.0
+pytest==8.3.5

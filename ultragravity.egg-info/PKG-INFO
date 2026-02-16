@@ -1,0 +1,126 @@
+Metadata-Version: 2.4
+Name: ultragravity
+Version: 0.1.0
+Summary: Ultragravity local automation assistant
+Requires-Python: <3.15,>=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: playwright<2.0.0,>=1.50.0
+Requires-Dist: playwright-stealth<2.0.0,>=1.0.6
+Requires-Dist: google-generativeai<1.0.0,>=0.3.0
+Requires-Dist: mistralai<2.0.0,>=1.0.0
+Requires-Dist: python-dotenv<2.0.0,>=1.0.0
+Requires-Dist: pydantic<3.0.0,>=2.5.0
+Requires-Dist: PyYAML<7.0.0,>=6.0.0
+Requires-Dist: numpy<3.0.0,>=1.26.0
+Requires-Dist: Pillow<12.0.0,>=10.0.0
+Requires-Dist: pyautogui<1.0.0,>=0.9.54
+Requires-Dist: mss<11.0.0,>=9.0.0
+Requires-Dist: pynput<2.0.0,>=1.7.0
+Requires-Dist: termcolor<3.0.0,>=2.4.0
+
+# Ultragravity Agent
+
+A reverse-engineered, "Human-Like" browser automation agent powered by **Google Gemini 3 Flash Preview** and **Playwright**.
+
+## Productization & Terminal UX (Phase 9)
+- Installable CLI command: `ultragravity`
+- First-run setup wizard for keys, macOS permissions checklist, and policy profile
+- Operator commands: `run`, `ask`, `policy`, `logs`, `status`
+
+## Reliability Hardening & Release (Phase 10)
+- Reliability benchmark runner: `PYTHONPATH=. python scripts/benchmark_phase10.py`
+- Benchmark artifacts: `reports/phase10_benchmark_report.md`, `reports/phase10_benchmark_report.json`
+- Operations docs:
+    - `docs/operations/incident_playbook.md`
+    - `docs/operations/rollback_procedures.md`
+    - `docs/operations/release_checklist.md`
+
+## Foundation hardening (Phase 1)
+- Dependency hygiene: deduplicated runtime and dev dependencies.
+- Reproducible install strategy: `constraints.txt` baseline.
+- Security hygiene: `.env` template placeholders and startup diagnostics.
+- Runtime config model: `ultragravity.config.yaml` schema-backed loader.
+
+## Features
+- **Vision-First Navigation**: Uses Gemini 3 Flash to "see" the page and determine actions.
+- **Human Simulation**: Implements Bezier curve mouse movements and natural typing patterns to evade bot detection.
+- **Stealth Mode**: Built on top of Playwright with stealth configurations.
+
+## Setup
+
+### Prerequisites
+- **Python 3.11** (Required: Python 3.14 on macOS is incompatible).
+- Google Gemini API Key.
+
+### Installation
+
+1.  **Install Python 3.11 via Homebrew**:
+    ```bash
+    brew install python@3.11
+    ```
+
+2.  **Create Virtual Environment**:
+    ```bash
+    /opt/homebrew/bin/python3.11 -m venv venv
+    source venv/bin/activate
+    ```
+
+3.  **Install Dependencies**:
+    ```bash
+    pip install -r requirements.txt -c constraints.txt
+    pip install -r requirements-dev.txt -c constraints.txt
+    pip install -e .
+    playwright install chromium
+    ```
+
+4.  **Configure Environment**:
+    Copy `.env.example` to `.env` and add your API Key:
+    ```bash
+    cp .env.example .env
+    # Edit .env and set GEMINI_API_KEY and/or MISTRAL_API_KEY
+    ```
+
+5. **Runtime Configuration**:
+   Default config is loaded from `ultragravity.config.yaml`.
+   You can pass a different config at runtime:
+   ```bash
+   python main.py "Search for model routing patterns" --config ultragravity.config.yaml
+   ```
+
+## Usage
+
+### First run
+Run the wizard once to configure keys and default policy:
+
+```bash
+ultragravity ask "Initialize setup" --wizard
+```
+
+### Easy Start (Recommended)
+Use the installable CLI command:
+
+```bash
+ultragravity run "Search for DeepMind agents and summarize" --url "https://www.google.com"
+```
+
+Or use the provided `run.sh` script:
+
+```bash
+chmod +x run.sh
+./run.sh "Search for DeepMind agents and summarize the results" --url "https://www.google.com"
+```
+
+### Manual Run
+Legacy entrypoint is still supported:
+
+```bash
+python main.py "Search for DeepMind agents and summarize" --url "https://www.google.com"
+```
+
+### Command Reference
+- `ultragravity run "<instruction>" [--url <url>] [--headless] [--model <name>]`
+- `ultragravity ask "<instruction>" [--headless] [--model <name>]`
+- `ultragravity policy` (show current profile)
+- `ultragravity policy --set strict|balanced|developer`
+- `ultragravity logs --kind audit|telemetry|all --lines 40`
+- `ultragravity status`

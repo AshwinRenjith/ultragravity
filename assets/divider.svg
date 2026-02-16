@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 100">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d0d2b"/>
+      <stop offset="100%" stop-color="#1a0a3e"/>
+    </linearGradient>
+    <linearGradient id="wave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.4"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="100" fill="url(#bg)"/>
+
+  <!-- Wave 1 -->
+  <path fill="none" stroke="url(#wave1)" stroke-width="2">
+    <animate attributeName="d"
+      values="M0,50 C150,20 300,80 450,50 C600,20 750,80 900,50;M0,50 C150,80 300,20 450,50 C600,80 750,20 900,50;M0,50 C150,20 300,80 450,50 C600,20 750,80 900,50"
+      dur="6s" repeatCount="indefinite"/>
+  </path>
+  <!-- Wave 2 -->
+  <path fill="none" stroke="url(#wave2)" stroke-width="1.5">
+    <animate attributeName="d"
+      values="M0,50 C100,70 200,30 350,50 C500,70 700,30 900,50;M0,50 C100,30 200,70 350,50 C500,30 700,70 900,50;M0,50 C100,70 200,30 350,50 C500,70 700,30 900,50"
+      dur="8s" repeatCount="indefinite"/>
+  </path>
+  <!-- Wave 3 -->
+  <path fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.3">
+    <animate attributeName="d"
+      values="M0,55 C200,35 400,75 600,45 C700,35 800,65 900,50;M0,45 C200,65 400,25 600,55 C700,65 800,35 900,50;M0,55 C200,35 400,75 600,45 C700,35 800,65 900,50"
+      dur="10s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Traveling dot on wave -->
+  <circle r="4" fill="#67e8f9" filter="url(#glow)" opacity="0.8">
+    <animateMotion dur="4s" repeatCount="indefinite" path="M0,50 C150,20 300,80 450,50 C600,20 750,80 900,50"/>
+  </circle>
+  <circle r="3" fill="#fbbf24" opacity="0.6">
+    <animateMotion dur="5s" repeatCount="indefinite" path="M0,50 C100,70 200,30 350,50 C500,70 700,30 900,50" begin="1s"/>
+  </circle>
+
+  <defs>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+</svg>

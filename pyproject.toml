@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ultragravity"
+version = "0.1.0"
+description = "Ultragravity local automation assistant"
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+	"playwright>=1.50.0,<2.0.0",
+	"playwright-stealth>=1.0.6,<2.0.0",
+	"google-generativeai>=0.3.0,<1.0.0",
+	"mistralai>=1.0.0,<2.0.0",
+	"python-dotenv>=1.0.0,<2.0.0",
+	"pydantic>=2.5.0,<3.0.0",
+	"PyYAML>=6.0.0,<7.0.0",
+	"numpy>=1.26.0,<3.0.0",
+	"Pillow>=10.0.0,<12.0.0",
+	"pyautogui>=0.9.54,<1.0.0",
+	"mss>=9.0.0,<11.0.0",
+	"pynput>=1.7.0,<2.0.0",
+	"termcolor>=2.4.0,<3.0.0",
+]
+
+[project.scripts]
+ultragravity = "ultragravity.cli:main"
+
+[tool.setuptools]
+packages = ["ultragravity", "ultragravity.memory", "ultragravity.tools", "agent", "skills", "tools"]

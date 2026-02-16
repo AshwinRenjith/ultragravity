@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 80">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0d2b"/><stop offset="100%" stop-color="#1a0a3e"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e">
+        <animate attributeName="stop-color" values="#f43f5e;#a78bfa;#f43f5e" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#a78bfa">
+        <animate attributeName="stop-color" values="#a78bfa;#f43f5e;#a78bfa" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="80" rx="12" fill="url(#bg)"/>
+  <text x="450" y="38" text-anchor="middle" font-family="'SF Pro', sans-serif" font-size="14" fill="#94a3b8">
+    Built with
+    <tspan fill="url(#heart)" font-weight="700"> ♥ </tspan>
+    by the Ultragravity team
+  </text>
+  <text x="450" y="58" text-anchor="middle" font-family="'SF Mono', monospace" font-size="10" fill="#64748b" opacity="0.6">
+    macOS · Python · Gemini · Mistral · Playwright
+  </text>
+</svg>

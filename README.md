@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" alt="Ultragravity" width="100%"/>
+  <img src="/Users/walpurgis/Desktop/AR/ultragravity/assets/header.svg" alt="Ultragravity" width="100%"/>
 </p>
 
 <p align="center">
